@@ -3,7 +3,7 @@ set -e
 export PYTHON=$PREFIX/bin/python
 ./configure \
     --prefix=$PREFIX \
-    --with-readline \
+    --without-readline \
     --with-libraries=$PREFIX/lib \
     --with-includes=$PREFIX/include \
     --with-openssl \

@@ -7,7 +7,7 @@ export FC=$(basename "$FC")
 
 ./configure \
     --prefix=$PREFIX \
-    --with-readline \
+    --without-readline \
     --with-libraries=$PREFIX/lib \
     --with-includes=$PREFIX/include \
     --with-openssl \

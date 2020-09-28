@@ -16,7 +16,7 @@ source:
     - patches/fix_gssapi_setenv_win.patch  # [win]
 
 build:
-  number: 0
+  number: 100
   skip: true  # [win and float(vc) < 14]
 
 requirements:
@@ -38,7 +38,7 @@ requirements:
     - openssl
     - msinttypes  # [win and float(vc) < 14]
     - openssl
-    - readline         # [not win]
+    #- readline         # [not win]
     - zlib
     - vc  # [win]
     - libuuid         # [not win]
@@ -46,7 +46,7 @@ requirements:
   run:
     - krb5
     - openssl
-    - readline        # [not win]
+    #- readline        # [not win]
     - tzcode          # [not win]
 
 outputs:
@@ -64,7 +64,7 @@ outputs:
         # these are here for sake of run_exports taking effect
         - krb5
         - openssl
-        - readline         # [not win]
+        #- readline         # [not win]
         - tzcode          # [not win]
         - zlib
         - libxml2
@@ -74,7 +74,7 @@ outputs:
         - {{ pin_subpackage('libpq', exact=True) }}
         - krb5
         - openssl
-        - readline         # [not win]
+        #- readline         # [not win]
         - tzcode          # [not win]
         - zlib
     test:
@@ -101,7 +101,7 @@ outputs:
         # these are here for sake of run_exports taking effect
         - krb5     # [not osx]
         - openssl
-        - readline         # [not win]
+        #- readline         # [not win]
         - zlib
         - {{ pin_subpackage('postgresql', exact=True) }}
         - python
@@ -115,7 +115,7 @@ outputs:
         - python
         - krb5
         - openssl
-        - readline         # [not win]
+        #- readline         # [not win]
         - zlib
     script: install_plpython.sh  # [unix]
     test:
@@ -139,7 +139,7 @@ outputs:
         # these are here for sake of run_exports taking effect
         - krb5
         - openssl
-        - readline         # [not win]
+        #- readline         # [not win]
         - tzcode          # [not win]
         - zlib
         - msinttypes       # [win and float(vc) <14]
