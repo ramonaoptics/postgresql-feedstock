@@ -3,9 +3,9 @@ c_compiler:
 c_compiler_version:
 - '8'
 channel_sources:
-- conda-forge,defaults
+- ramonaoptics,conda-forge,defaults
 channel_targets:
-- conda-forge main
+- ramonaoptics main
 cxx_compiler:
 - gxx
 cxx_compiler_version:
@@ -36,15 +36,13 @@ pin_run_as_build:
   python:
     min_pin: x.x
     max_pin: x.x
-  readline:
-    max_pin: x
   zlib:
     max_pin: x.x
 python:
 - 3.6.* *_cpython
 - 3.7.* *_cpython
 - 3.8.* *_cpython
-readline:
-- '8.0'
+target_platform:
+- linux-ppc64le
 zlib:
 - '1.2'
